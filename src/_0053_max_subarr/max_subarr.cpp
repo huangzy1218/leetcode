@@ -7,14 +7,12 @@
  * Explanation: [4,-1,2,1] has the largest sum = 6.
 */
 
-class Solution
-{
+class Solution {
 public:
     int maxSubArray(vector<int>& nums)
     {
         int maxValue = nums[0];
-        for (int i = 1; i < nums.size(); i++)
-        {
+        for (int i = 1; i < nums.size(); i++) {
             nums[i] = nums[i] + max(0, nums[i - 1]);
             maxValue = max(maxValue, nums[i]);
         }
