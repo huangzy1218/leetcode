@@ -19,7 +19,7 @@ class Solution {
     public int minimumBoxes(int n) {
         int i = 1, j = 1, curNum = 1;
         while (curNum < n) { // 找到最大层数和最后一层的立方体个数
-            n -= curNum;
+            n -= curNum; // curNum 表示的是当前层放置的最大立方体数
             i++;
             curNum += i;
         }
